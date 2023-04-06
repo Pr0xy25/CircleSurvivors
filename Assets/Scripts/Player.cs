@@ -15,38 +15,40 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("up"))
+        // Movement
+        if (Input.GetKey("w"))
         {
             rb.velocity = new Vector3(rb.velocity.x, 3f);
         }
-        if (Input.GetKey("down"))
+        if (Input.GetKey("s"))
         {
             rb.velocity = new Vector3(rb.velocity.x, -3f);
         }
-        if (Input.GetKey("left"))
+        if (Input.GetKey("a"))
         {
             rb.velocity = new Vector3(-3f, rb.velocity.y);
         }
-        if (Input.GetKey("right"))
+        if (Input.GetKey("d"))
         {
             rb.velocity = new Vector3(3f, rb.velocity.y);
         }
 
-        if (Input.GetKeyUp("up"))
+        if (Input.GetKeyUp("w"))
         {
             rb.velocity = new Vector3(rb.velocity.x, 0);
         }
-        if (Input.GetKeyUp("down"))
+        if (Input.GetKeyUp("s"))
         {
             rb.velocity = new Vector3(rb.velocity.x, 0);
         }
-        if (Input.GetKeyUp("left"))
+        if (Input.GetKeyUp("a"))
         {
             rb.velocity = new Vector3(0, rb.velocity.y);
         }
-        if (Input.GetKeyUp("right"))
+        if (Input.GetKeyUp("d"))
         {
             rb.velocity = new Vector3(0, rb.velocity.y);
         }
+
     }
 }
